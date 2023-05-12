@@ -29,7 +29,7 @@
         <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Create
             Content</button>
         <!-- Modal for creating a new category -->
-       
+
         <!-- Modal for create-->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -71,27 +71,37 @@
                                                 <option value="Network">Network</option>
                                                 <option value="Email">Email</option>
                                                 <option value="Backup">Backup</option>
-                                                <option value="Hardware">Hardware</option>
-                                                <option value="other"  data-bs-toggle="modal" data-bs-target="#exampleModal">Other</option>
+                                                <option value="other" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal">Other</option>
                                             </select>
-                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
-                                                  <div class="modal-content">
-                                                    <div class="modal-header">
-                                                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Other
+                                                                category</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <label for="other-category">Enter a category:</label>
+                                                            <input type="text" class="form-control" id="other-category"
+                                                                name="category" required>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary">Save
+                                                                changes</button>
+                                                        </div>
                                                     </div>
-                                                    <div class="modal-body">
-                                                      ...
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                      <button type="button" class="btn btn-primary">Save changes</button>
-                                                    </div>
-                                                  </div>
                                                 </div>
-                                              </div>
+                                            </div>
                                         </div>
+
 
                                         <div class="col-md-6">
                                             <label for="layout1">Layout</label>
@@ -106,8 +116,8 @@
 
                                 <div class="mb-3">
                                     <label>Tags</label>
-                                    <input type="text" class="form-control" id="tags" name="tags"
-                                        placeholder="" autofocus required>
+                                    <input type="text" class="form-control" id="tags" name="tags" placeholder=""
+                                        autofocus required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Reference</label>

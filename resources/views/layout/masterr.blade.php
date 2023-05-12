@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+        integrity="sha512-8TEr+E8Nk+Mh/U/cdhRiGgJX3ZU+VwkDbmz10quLzLLl2AS/XgfaIH2cMch8kN9PqZJ9ljFgdiqd4XEGAXHNTg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,10 +27,10 @@
                         class="nav-link link-dark px-2 active fa-brands fa-hubspot fa-2xl px-2 p-2 text-white"
                         aria-current="page">eHub</a></li>
             </ul>
-            
+
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <button type="submit" class="btn btn-link text-decoration-none text-white" >
+                <button type="submit" class="btn btn-link text-decoration-none text-white">
                     Logout
                 </button>
             </form>
@@ -141,7 +144,11 @@
         var input = document.querySelector('input[name="tags"]'),
             // init Tagify script on the above inputs
             tagify = new Tagify(input, {
-                whitelist: ["Computer", "Software", "Technology", "Programming", "Tech", "Coding", "Developer", "Business", "Softwaredeveloper", "Programmer", "Javascript", "Python", "Java", "HTML", "Hardware", "Webdevelopment", "Tecnologia", "Code", "Webdeveloper", "Softwareengineer", "ERP", "Webdesign", "Computerscience", "Coder", "CSS", "Development", "Softwaredevelopment", "Android", "IT"
+                whitelist: ["Computer", "Software", "Technology", "Programming", "Tech", "Coding", "Developer",
+                    "Business", "Softwaredeveloper", "Programmer", "Javascript", "Python", "Java", "HTML",
+                    "Hardware", "Webdevelopment", "Tecnologia", "Code", "Webdeveloper", "Softwareengineer", "ERP",
+                    "Webdesign", "Computerscience", "Coder", "CSS", "Development", "Softwaredevelopment", "Android",
+                    "IT"
                 ],
                 maxTags: 10,
                 dropdown: {
@@ -155,7 +162,11 @@
         var input = document.querySelector('input[name="tagsOne"]'),
             // init Tagify script on the above inputs
             tagify = new Tagify(input, {
-                whitelist: ["Computer", "Software", "Technology", "Programming", "Tech", "Coding", "Developer", "Business", "Softwaredeveloper", "Programmer", "Javascript", "Python", "Java", "HTML", "Hardware", "Webdevelopment", "Tecnologia", "Code", "Webdeveloper", "Softwareengineer", "ERP", "Webdesign", "Computerscience", "Coder", "CSS", "Development", "Softwaredevelopment", "Android", "IT"
+                whitelist: ["Computer", "Software", "Technology", "Programming", "Tech", "Coding", "Developer",
+                    "Business", "Softwaredeveloper", "Programmer", "Javascript", "Python", "Java", "HTML",
+                    "Hardware", "Webdevelopment", "Tecnologia", "Code", "Webdeveloper", "Softwareengineer", "ERP",
+                    "Webdesign", "Computerscience", "Coder", "CSS", "Development", "Softwaredevelopment", "Android",
+                    "IT"
                 ],
                 maxTags: 10,
                 dropdown: {
