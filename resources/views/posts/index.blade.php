@@ -26,33 +26,30 @@
             <h1 class="pt-5 fw-light mb-2">Manage Post</h1>
         </div>
         {{-- <a href="{{ route('posts.create') }}" class="btn btn-primary">Create Post</a> --}}
-        <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Create
-            Content</button>
-        <!-- Modal for creating a new category -->
-
-        <!-- Modal for create-->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Create Content</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container mt-2">
-                            <form action="dataInsert" method="post" enctype="multipart/form_data">
-                                @csrf
-                                <div class="mb-3">
-                                    <label>Title</label>
-                                    <input type="text" class="form-control" id="title" name="title" placeholder=""
-                                        required>
-                                </div>
-                                <div class="mb-3">
-                                    <div class="row">
-                                        {{-- <div class="col-md-6">
-                                            <label for="category">Category</label>
-                                            <select class="form-select" id="category" name="category" required>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content modal-xl">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Create Content</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container mt-2">
+                        <form action="dataInsert" method="post" enctype="multipart/form_data">
+                            @csrf
+                            <div class="mb-3">
+                                <label>Title</label>
+                                <input type="text" class="form-control" id="title" name="title"
+                                    placeholder="" required>
+                            </div>
+                            <div class="mb-3">
+                                <div class="row align-items-end">
+                                    <div class="col-md-6">
+                                        <label for="category">Category</label>
+                                        <div class="d-flex">
+                                            <select class="form-select me-2" id="category" name="category"
+                                                required>
                                                 <option value="">Select a category</option>
                                                 <option value="Android">Android</option>
                                                 <option value="Internet">Internet</option>
@@ -61,63 +58,24 @@
                                                 <option value="Backup">Backup</option>
                                                 <option value="Hardware">Hardware</option>
                                             </select>
-                                        </div> --}}
-                                        <div class="col-md-6">
-                                            <label for="category">Category</label>
-                                            <select class="form-select" id="category" name="category" required>
-                                                <option value="">Select a category</option>
-                                                <option value="Android">Android</option>
-                                                <option value="Internet">Internet</option>
-                                                <option value="Network">Network</option>
-                                                <option value="Email">Email</option>
-                                                <option value="Backup">Backup</option>
-                                                <option value="other" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal">Other</option>
-                                            </select>
+                                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                                data-bs-toggle="modal">Open second modal</button>
 
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Other
-                                                                category</h1>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                                aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <label for="other-category">Enter a category:</label>
-                                                            <input type="text" class="form-control" id="other-category"
-                                                                name="category" required>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                data-bs-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-primary">Save
-                                                                changes</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-6">
-                                            <label for="layout1">Layout</label>
-                                            <select class="form-select" id="layout1" name="layout1">
-                                                <option value="">Select Layout</option>
-                                                <option value="">Layout 1</option>
-                                                <option value="">Layout 2</option>
-                                            </select>
                                         </div>
                                     </div>
+                                    <div class="col-md-6">
+                                        <label for="layout1">Layout</label>
+                                        <select class="form-select" id="layout1" name="layout1">
+                                            <option value="">Select Layout</option>
+                                            <option value="">Layout 1</option>
+                                            <option value="">Layout 2</option>
+                                        </select>
+                                    </div>
                                 </div>
-
                                 <div class="mb-3">
                                     <label>Tags</label>
-                                    <input type="text" class="form-control" id="tags" name="tags" placeholder=""
-                                        autofocus required>
+                                    <input type="text" class="form-control" id="tags" name="tags"
+                                        placeholder="" autofocus required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Reference</label>
@@ -130,13 +88,44 @@
                                         placeholder="Enter your Content Here....."></textarea>
                                 </div>
                                 <input type="submit" class="btn btn-primary">
-                            </form>
-                        </div>
+                        </form>
                     </div>
-
                 </div>
             </div>
         </div>
+    </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Add New Category</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label>Name</label>
+                        <input type="text" class="form-control" id="name" name="name"
+                            placeholder="" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Description</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Icon</label>
+                        <input class="form-control" type="file" id="formFile">
+                      </div>
+                </div>  
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back
+                        to first</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Create Content</a>
         <div class="card shadow-lg d-flex">
             <div class="card-body">
                 <table class="table mt-3">

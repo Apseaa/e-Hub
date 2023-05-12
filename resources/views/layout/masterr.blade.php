@@ -43,6 +43,10 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@4.3.0/dist/tagify.min.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
+        integrity="sha512-4Jw+DoQwoQoKsJXYswg3UwYzKw43GO4pHjvrcAC7IV4Ud30wvYiysk+O4w4CG0HedXZnAqgWs76g8RK3m9xdQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
     <script src="js/js.js"></script>
     <script>
         window.onscroll = function() {
